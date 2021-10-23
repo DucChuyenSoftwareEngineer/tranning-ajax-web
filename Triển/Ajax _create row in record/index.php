@@ -106,7 +106,7 @@
            $('#insert_form')[0].reset();  
       });  
       $(document).on('click', '.edit_data', function(){  
-           var employee_id = $(this).attr("id");  
+           var employee_id = $(this).attr("id");  // lay gia tri
            $.ajax({  
                 url:"fetch.php",  
                 method:"POST",  
@@ -125,7 +125,7 @@
            });  
       });  
       $('#insert_form').on("submit", function(event){  
-           event.preventDefault();  
+           event.preventDefault();  //huy su kien
            if($('#name').val() == "")  
            {  
                 alert("Name is required");  
@@ -147,7 +147,7 @@
                 $.ajax({  
                      url:"insert.php",  
                      method:"POST",  
-                     data:$('#insert_form').serialize(),  
+                     data:$('#insert_form').serialize(), // lay gia tri  
                      beforeSend:function(){  
                           $('#insert').val("Inserting");  
                      },  
